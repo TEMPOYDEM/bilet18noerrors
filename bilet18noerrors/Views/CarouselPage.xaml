@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    <CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bilet18noerrors.Views.CarouselPage"
+                  xmlns:vm="clr-namespace:bilet18noerrors.ViewModels">
+    <CarouselPage.BindingContext>
+        <vm:CarouselViewModel />
+    </CarouselPage.BindingContext>
+    <ContentPage>
+            <ContentPage.Padding>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="iOS, Android" Value="0,40,0,0" />
+                </OnPlatform>
+            </ContentPage.Padding>
+            <StackLayout>
+                <Label Text="Red" FontSize="Medium" HorizontalOptions="Center" />
+
+            <Button BackgroundColor="Red" WidthRequest="200" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  Command="{Binding OpenWebCommand}"/>
+        </StackLayout>
+        </ContentPage>
+            
+         <ContentPage>
+        <Button BackgroundColor="Green" WidthRequest="200" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Command="{Binding ButtonClick}" />
+    </ContentPage>
+        <ContentPage>
+
+        <Button BackgroundColor="Blue" WidthRequest="200" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Command="{Binding OpenWebCommand}"/>
+    </ContentPage>
+    </CarouselPage>
